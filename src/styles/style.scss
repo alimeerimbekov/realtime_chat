@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fcf;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+
+.App {
+  background: url('../assets/chat_Bg.jpg') no-repeat center/cover;
+}
+
+.login {
+  &__text {
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    line-height: 34px;
+    text-decoration: underline;
+    background: blueviolet;
+    width: 400px;
+    padding: 10px 0;
+    border-radius: 20px;
+  }
+
+  &__grid {
+    width: 400px !important;
+    background: blue;
+    border-radius: 20px;
+  }
+}
+
+.navbar {
+  &__text {
+    font-size: 30px;
+    color: blueviolet;
+  }
+}
+
+.chat {
+  position: relative;
+
+  &__content {
+    width: 80%;
+    height: 80vh;
+    border: 3px solid white;
+    overflow-Y: auto;
+    background: url("../assets/chat.jpg");
+  }
+
+  &__message {
+    margin: 10px;
+    width: fit-content;
+    max-width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    column-gap: 5px;
+
+    &-top {
+      background: #e3f2fd;
+      border-radius: 20px;
+      padding: 7px 7px 7px 15px;
+
+    }
+
+    &-text {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+  }
+
+  &__send {
+    position: absolute;
+    bottom: 2px;
+    background: black;
+    padding: 10px 10px 20px 10px;
+  }
+
+  &__field {
+    background: #e3f2fd;
+    border-radius: 20px;
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  &__btn {
+    padding: 10px 0;
+  }
+}
+
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  background-color: #e3f2fd !important;
+}
